@@ -1,0 +1,27 @@
+﻿<Window x:Class="GPIB_Lab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GPIB_Lab"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="496" Closing="Window_Closing">
+    <Grid HorizontalAlignment="Center" Width="496">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="lbxData" HorizontalAlignment="Left" Height="323" Margin="191,51,0,0" VerticalAlignment="Top" Width="276" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <RadioButton Content="Keithley 196" Name="rbn196" HorizontalAlignment="Left" Height="19" Margin="24,258,0,0" VerticalAlignment="Top" Width="107" Checked="rbn196_Checked"/>
+        <RadioButton Content="Keithley 2000" Name="rbn2000" HorizontalAlignment="Left" Height="18" Margin="24,282,0,0" VerticalAlignment="Top" Width="107" Checked="rbn2000_Checked"/>
+        <Button Content="Open Port" Name="btnOpen" HorizontalAlignment="Left" Height="26" Margin="24,185,0,0" VerticalAlignment="Top" Width="107" Click="btnOpen_Click"/>
+        <Button Content="Close Port" Name="btnClose" HorizontalAlignment="Left" Height="26" Margin="24,217,0,0" VerticalAlignment="Top" Width="107" Click="btnClose_Click"/>
+        <Button Content="Take 100 Points" Name="btnColl" HorizontalAlignment="Left" Height="27" Margin="24,315,0,0" VerticalAlignment="Top" Width="107" Click="btnColl_Click"/>
+        <Button Content="Clear Data" Name="btnClr" HorizontalAlignment="Left" Height="27" Margin="24,347,0,0" VerticalAlignment="Top" Width="107" Click="btnClr_Click"/>
+        <ComboBox Name ="cboAdd" HorizontalAlignment="Left" Height="28" Margin="24,80,0,0" VerticalAlignment="Top" Width="149"/>
+        <ComboBox Name ="cboID" HorizontalAlignment="Left" Height="28" Margin="24,141,0,0" VerticalAlignment="Top" Width="149"/>
+        <Label Content="Address:" HorizontalAlignment="Left" Height="24" Margin="24,51,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Height="23" Margin="24,113,0,0" VerticalAlignment="Top" Width="107"/>
+
+    </Grid>
+</Window>
